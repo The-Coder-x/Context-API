@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { Cxt } from '../Context'
+import SingleProduct from './SingleProduct'
 
 
 
@@ -11,8 +12,7 @@ const Home = () => {
        <span style={{ fontSize: 30 }}>Products Page</span>
        <div className="productContainer">
          {products.map(prod => (
-           <h1> {prod.name} </h1>
-           
+           <SingleProduct prod={prod} key={prod.id} />
          ))}
        </div>
      </div>
